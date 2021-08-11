@@ -10,7 +10,7 @@ export const StickersLuchoApp = () => {
   return (
     <>
       <h4>Stickers Lucho App</h4>
-      <AddCategory />
+      <AddCategory setCategories={ setCategories } />
       <hr />
 
       <ol>
