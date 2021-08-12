@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { AddCategory } from './components/AddCategory';
+import { StickersGrid } from './components/StickersGrid';
 
 export const StickersLuchoApp = () => {
 
-  const [categories, setCategories] = useState(['Goku', 'Saitama', 'Mazinger']);
-
-
+  const [categories, setCategories] = useState(['Saitama']);
 
   return (
     <>
@@ -15,9 +14,12 @@ export const StickersLuchoApp = () => {
 
       <ol>
         {
-          categories.map( cats => {
-            return <li key={cats} >{ cats }</li>
-          })
+          categories.map( category => (
+            <StickersGrid 
+              category={ category }
+              key={ category }
+            />
+            ))
         }
       </ol>
     </>
