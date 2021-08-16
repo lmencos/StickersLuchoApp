@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { StickerGridItem } from './StickerGridItem';
 
 export const StickersGrid = ({ category }) => {
 
-  const getStickers = async() => {
+  const [images, setImages] = useState([]);
 
+  useEffect( () => {
+    getStickers();
+  }, []);
+
+  const getStickers = async() => {
     const url = 'https://api.giphy.com/v1/stickers/search?q=rick+and+morty&limit=12&api_key=zoPqydGyVGGouAnSzZyy9d6uvYvTHPcf';
     const resp = await fetch( url );
     const { data } = await resp.json();
@@ -17,14 +23,21 @@ export const StickersGrid = ({ category }) => {
     })
 
     console.log(stickers);
+    setImages(stickers);
 
   };
-
-  getStickers();
 
   return (
     <div>
         <h4>{ category }</h4>
+          {
+            images.map( img => (
+              <StickerGridItem 
+                key={ img.id }
+                { ...img }
+              />
+            ))
+          }
     </div>
   )
 }
