@@ -5,7 +5,7 @@ export const StickerGridItem = ( { title, stickerUrl } ) => {
   // console.log( id, title, stickerUrl );
 
   return (
-    <div>
+    <div className="card">
       <img src={ stickerUrl } alt={ title } />
       <p>{ title }</p>
     </div>
