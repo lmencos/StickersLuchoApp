@@ -5,7 +5,7 @@ import { StickersGrid } from './components/StickersGrid';
 
 export const StickersLuchoApp = () => {
 
-  const [categories, setCategories] = useState(['']);
+  const [categories, setCategories] = useState(['Goku']);
 
   return (
     <>
