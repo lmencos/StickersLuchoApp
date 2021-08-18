@@ -15,7 +15,7 @@ export const StickersGrid = ({ category }) => {
 
       {/* { loading ? 'Loading stickers...' : 'Loading complete' } */}
 
-      { loading ? <p>Loading 6 stickers of { category }</p> : null }
+      { loading ? <p className="loading animate__animated animate__flash">Loading 6 stickers of { category }</p> : null }
 
       <div className="card-grid">
             {

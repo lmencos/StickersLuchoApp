@@ -39,6 +39,11 @@ input {
   align-items: center;
 }
 
+.loading {
+  font-size: smaller;
+  color: red;
+}
+
 .saitama-container {
   position: relative;
 }
