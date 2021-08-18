@@ -4,7 +4,7 @@ import { StickerGridItem } from './StickerGridItem';
 
 export const StickersGrid = ({ category }) => {
 
-  const { data, loading } = useFectchStickers( category );
+  const { data: images, loading } = useFectchStickers( category );
 
   console.log(loading);
 
@@ -15,9 +15,11 @@ export const StickersGrid = ({ category }) => {
 
       {/* { loading ? 'Loading stickers...' : 'Loading complete' } */}
 
+      { loading ? <p>Loading 6 stickers of { category }</p> : null }
+
       <div className="card-grid">
             {
-              data.map( img => (
+              images.map( img => (
                 <StickerGridItem 
                   key={ img.id }
                   { ...img }
