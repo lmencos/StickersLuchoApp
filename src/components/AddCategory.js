@@ -25,9 +25,11 @@ export const AddCategory = ( { setCategories } ) => {
       onSubmit={ handleSubmit }
     >
       <input 
+        className="input-typing"
         type="text" 
         value={ inputValue }
         onChange={ handleInputValue }
+        placeholder="Saitama says: Type some category"
       />
     </form>
   )

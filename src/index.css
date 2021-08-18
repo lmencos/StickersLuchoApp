@@ -10,6 +10,8 @@ input {
   font-size: 0.9rem;
   width: 36%;
   color: blue;
+  transition-property: all;
+  transition-duration: 1.5s;
 }
 
 .card-grid {
@@ -35,4 +37,40 @@ input {
 
 .card img {
   align-items: center;
+}
+
+.saitama-container {
+  position: relative;
+}
+
+.input-container {
+  padding: .5%;
+  position: relative;
+}
+
+.input-typing:hover {
+  box-shadow: 0 0 6px rgb(248, 73, 42);
+  background-color: #ffe0c1;
+}
+
+.saitama {
+  position: relative;
+  margin: 3px;
+  padding: 0px;
+  left: 0;
+  top: 0;
+  width: 120px;
+  /* box-shadow: 0 0 3px blue; */
+
+  /* transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+  transition-delay: .5s; */
+
+  transition: left 1s linear, top 1s linear 1s;
+}
+
+.saitama:hover {
+  left: 180px;
+  /* top: 21px; */
 }
