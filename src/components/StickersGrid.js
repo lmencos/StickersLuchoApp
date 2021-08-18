@@ -1,22 +1,23 @@
-import React, { useEffect, useState } from 'react';
-import { getStickers } from '../helpers/getStickers';
+import React from 'react';
+import { useFectchStickers } from '../hooks/useFectchStickers';
 import { StickerGridItem } from './StickerGridItem';
 
 export const StickersGrid = ({ category }) => {
 
-  const [images, setImages] = useState([]);
+  const { data, loading } = useFectchStickers( category );
 
-  useEffect( () => {
-    getStickers( category )
-      .then(setImages)
-  }, [category]);
+  console.log(loading);
+
 
   return (
     <>
       <h4>{ category }</h4>
+
+      {/* { loading ? 'Loading stickers...' : 'Loading complete' } */}
+
       <div className="card-grid">
             {
-              images.map( img => (
+              data.map( img => (
                 <StickerGridItem 
                   key={ img.id }
                   { ...img }
