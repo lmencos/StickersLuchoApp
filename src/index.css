@@ -55,6 +55,7 @@ input {
 
 .input-typing {
   font-size: smaller;
+  color:#ffe0c1;
 }
 
 .input-typing:hover {
