@@ -1,5 +1,5 @@
 import React from 'react';
-import saitama from '../saitamaFace.gif';
+import saitama from '../images/saitamaFace.gif';
 
 export const ImageMoving = () => {
 
