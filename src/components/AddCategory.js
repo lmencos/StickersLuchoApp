@@ -29,7 +29,7 @@ export const AddCategory = ( { setCategories } ) => {
         type="text" 
         value={ inputValue }
         onChange={ handleInputValue }
-        placeholder="Saitama says: Type some category"
+        placeholder="Type some category"
       />
     </form>
   )
